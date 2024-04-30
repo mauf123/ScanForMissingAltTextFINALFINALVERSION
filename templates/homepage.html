@@ -5,13 +5,19 @@
     <title>Bootstrap Form Example</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        .container{
+            margin-top: 100px;
+        }
+
+    </style>
 </head>
 <body>
 <div class="container">
     <h1>Bootstrap Form Example</h1>
     <form action="/formpage" method="POST">
         <div class="form-group">
-            <label for="URLInputField">Enter URL</label>
+            <label for="URLInputField"></label>
             <input type="text" class="form-control" id="URLInputField" name="url" placeholder="Enter URL">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>

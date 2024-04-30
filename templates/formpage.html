@@ -5,6 +5,13 @@
     <title>Images without Alt Text</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        /* Custom CSS to adjust image size */
+        img {
+            width: 70%; /* Reduce width by 70% */
+            height: auto; /* Maintain aspect ratio */
+        }
+    </style>
 </head>
 <body>
 <div class="container">
@@ -19,26 +26,14 @@
         </tr>
         </thead>
         {% for image in images %}
-
         <tbody>
-        { for i in range(1,999) %}
-        <td scope="col">{{ i }}</td>
+            <td scope="col">{{ loop.index }}</td>
+            <td scope="col">{{ image.src }}</td>
+            <td scope="col">{{ image.alt }}</td>
+            <td><img src="{{ image.src }}"> </td>
         </tbody>
         {% endfor %}
-
-
-
-            {% for image in images %}
-    <tbody>
-        <td scope="col">{{ image.src }}</td>
-        <td scope="col">{{ image.src }}</td>
-        <td scope="col">{{ image.alt }}</td>
-
-        </tbody>
-                {% endfor %}
     </table>
-
-    </div>
 </div>
 <!-- Bootstrap JS (optional, for certain components) -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"></script>
