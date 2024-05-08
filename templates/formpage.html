@@ -5,6 +5,7 @@
     <title>Images without Alt Text</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/styleForFormPage.css">
     <style>
         /* Custom CSS to adjust image size */
         img {
@@ -14,27 +15,43 @@
     </style>
 </head>
 <body>
+
+<section id="bannerTop">
+    <div class="container">
+        <div class="col-md-6">
+        </div>
+    </div>
+    <img src="../static/images/wave1.png" class="bottom-img" id="wavePicture">
+</section>
+
 <div class="container">
     <!--<h1>Images without Alt Text</h1>-->
-    <table class="table">
+    <table class="table table-striped">
         <thead>
         <tr>
-         <th scope="col">#</th>
-         <th scope="col">URL</th>
-         <th scope="col">alt text:</th>
+            <th scope="col">#</th>
+            <th scope="col">URL</th>
+            <th scope="col">alt text:</th>
             <th scope="col">SOURCE PICTURE</th>
         </tr>
         </thead>
         {% for image in images %}
         <tbody>
-            <td scope="col">{{ loop.index }}</td>
-            <td scope="col">{{ image.src }}</td>
-            <td scope="col">{{ image.alt }}</td>
-            <td><img src="{{ image.src }}"> </td>
+        <td scope="col">{{ loop.index }}</td>
+        <td scope="col">{{ image.src }}</td>
+        <td scope="col">{{ image.alt }}</td>
+        <td><img src="{{ image.src }}"> </td>
         </tbody>
         {% endfor %}
     </table>
 </div>
+
+<section id="bannerBottom">
+    <div class="reverse-image">
+        <img src="../static/images/wave1.png" class="bottom-img" id="wavePicture">
+    </div>
+</section>
+
 <!-- Bootstrap JS (optional, for certain components) -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"></script>
 </body>

@@ -4,7 +4,12 @@ import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path="/static")
+
+
+#disable cache saving CSS files and not redendering the new ones
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
+
 
 def find_images_without_alt(url):
     image_list = []

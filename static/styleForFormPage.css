@@ -1,0 +1,42 @@
+.container{
+    margin-top: 30px;
+}
+
+#bannerTop{
+    background-image: linear-gradient(to right, #8EB6FF,#0059FA);
+    color: #fff;
+        padding-top:5px;
+
+}
+
+.bottom-img{
+    width:100%;
+}
+
+.bannerPicture{
+    position: absolute;
+    top:-220px;
+    left:200px
+}
+
+.textOnBanner{
+    position: absolute;
+    left:-400px;
+
+}
+
+#bannerBottom{
+    background-image: linear-gradient(to right, #8EB6FF,#0059FA);
+    color: #fff;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-top: -20px;
+}
+.reverse-image{
+    transform: rotateX(180deg);
+
+}
+
+
+

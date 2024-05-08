@@ -4,27 +4,161 @@
     <meta charset="UTF-8">
     <title>Bootstrap Form Example</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <style>
-        .container{
-            margin-top: 100px;
-        }
-
-    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../static/styleForHomePage.css">
 </head>
 <body>
+
+<!--- NAVBAR ---->
+<section id="nav-bar">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <img src="../static/images/alts_canner-removebg-preview.png" class="navbarImage">
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="homepage.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">about the program</a>
+      </li>
+
+    </ul>
+
+  </div>
+</nav>
+</section>
+
+<!---- Banner Section -->
+<section id="banner">
 <div class="container">
-    <h1>Bootstrap Form Example</h1>
+    <div class="col-md-6">
+        <div class="textOnBanner">
+            <h1>Scanning your pictures for missing alt text</h1>
+            <p> This is a software project created based on our final project for our computer science education. The project is solely made for helping companies look through their website and finding pictures without alt text, so they can comply with the European accessibility act
+            </p>
+        </div>
+
+        <div class="beginButton">
+            <button class="btn btn-primary" onclick="scrollToURLInputField()">Begin</button>
+        </div>
+
+
+
+        <div class="bannerPicture">
+            <img src="../static/images/home2.png">
+        </div>
+    </div>
+</div>
+<img src="../static/images/wave1.png" class="bottom-img" id="wavePicture">
+</section>
+
+<div class="container">
+    <div class="imgContainer">
+        <img src="../static/images/alts_canner-removebg-preview.png">
+    </div>
     <form action="/formpage" method="POST">
         <div class="form-group">
             <label for="URLInputField"></label>
             <input type="text" class="form-control" id="URLInputField" name="url" placeholder="Enter URL">
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="submitButton">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
     </form>
 </div>
 
+<link rel="import" href="templates/footer template.html"> <!-- Link to your template file -->
+<footer class="bg-primary text-center text-white">
+    <!-- Grid container -->
+    <div class="container p-4">
+
+        <!-- Section: Text -->
+        <section class="mb-4">
+            <p>
+This software project, created by Kasper and Marcus from KEA, focuses solely on scanning websites for missing alt text on images. Alt text is crucial for accessibility, providing descriptions for images that assist users who may have visual impairments. Our software aims to streamline this process by identifying any instances where alt text is absent, ensuring websites are more inclusive and accessible for all users            </p>
+        </section>
+        <!-- Section: Text -->
+
+        <!-- Section: Links -->
+        <section class="">
+            <!--Grid row-->
+            <div class="row">
+                <!--Grid column-->
+
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Links</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="#!" class="text-white">Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white">Link 2</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white">Link 3</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white">Link 4</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Links</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="#!" class="text-white">Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white">Link 2</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white">Link 3</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white">Link 4</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
+        </section>
+        <!-- Section: Links -->
+
+    </div>
+    <!-- Grid container -->
+
+
+
+</footer>
 <!-- Bootstrap JS (optional, for certain components) -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"></script>
+
+<script>
+function scrollToURLInputField() {
+    var wavePicture = document.getElementById('wavePicture');
+    if (wavePicture) {
+        var offsetFromInputfield = 5000;
+       var scrollSection = wavePicture.offsetTop - offsetFromInputfield;
+        wavePicture.scrollIntoView({top: scrollSection, behavior: 'smooth' });
+    }
+}
+</script>
 </body>
 </html>

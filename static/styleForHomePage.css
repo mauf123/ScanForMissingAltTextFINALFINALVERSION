@@ -1,0 +1,107 @@
+.container{
+            margin-top: 150px;
+            width: 500px;
+            height: 500px;
+        }
+      .imgContainer {
+        width: 500px; /* Define a specific width for the container */
+        height: auto; /* Let the height adjust based on the image aspect ratio */
+          margin-left: -20px;
+          margin-top: 90px;
+    }
+
+    .imgContainer img {
+        max-width: 100%; /* Make sure the image doesn't exceed the container's width */
+        height: auto; /* Maintain the aspect ratio */
+    }
+
+    .submitButton {
+        width: 200px; /* Define a specific width for the button */
+        margin-left: 200px; /* Center the button horizontally */
+        border-radius: 10px;
+    }
+
+    #URLInputField{
+        border-radius: 10px;
+    }
+
+    #nav-bar{
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+
+    .navbar{
+        background-image: linear-gradient(to right, #8EB6FF,#0059FA);
+        padding: 0 !important;
+    }
+
+    /*------- Banner ------- */
+#banner{
+    background-image: linear-gradient(to right, #8EB6FF,#0059FA);
+    color: #fff;
+        padding-top:5px;
+
+}
+
+.bottom-img{
+    width:100%;
+}
+
+.bannerPicture{
+    position: absolute;
+    top:-220px;
+    left: 200px;
+}
+
+.textOnBanner{
+    position: absolute;
+    left:-400px;
+
+}
+
+
+
+.navbarImage{
+    width: 7%;
+    height: 7%;
+}
+
+  .nav-item {
+    margin: 10px; /* Adjust margin for spacing */
+  }
+
+  .nav-link {
+    border-radius: 20px; /* Make the buttons round */
+    padding: 10px 20px; /* Add padding for spacing */
+    background-color: #ededed; /* Set background color */
+    color: #ffffff; /* Set text color */
+    transition: background-color 0.3s; /* Add smooth transition */
+  }
+
+  .nav-link:hover {
+    background-color: #f6821f; /* Change background color on hover */
+    color: #ffffff; /* Change text color on hover */
+  }
+
+.beginButton {
+    position: relative; /* Change to relative positioning */
+    margin-left: -405px; /* Adjust margin instead of absolute positioning */
+    top: 200px;
+    width: 150px; /* Adjust width */
+    height: 60px; /* Adjust height */
+}
+
+
+
+.beginButton button {
+    font-size: 18px; /* Maintain consistent font size */
+    border-radius: 10px; /* Maintain consistent border radius */
+    background-color: #007bff; /* Set background color */
+    color: #ffffff; /* Set text color */
+}
+
+.beginButton button:hover{
+    background-color: #f6821f; /* Change background color on hover */
+    color: #ffffff; /* Change text color on hover */
+}
