@@ -1,107 +1,230 @@
-.container{
-            margin-top: 150px;
-            width: 500px;
-            height: 500px;
-        }
-      .imgContainer {
-        width: 500px; /* Define a specific width for the container */
-        height: auto; /* Let the height adjust based on the image aspect ratio */
-          margin-left: -20px;
-          margin-top: 90px;
-    }
+@font-face {
+    font-family: "Poppins";
+    src: url("../static/Poppins-Light.ttf");
+}
 
-    .imgContainer img {
-        max-width: 100%; /* Make sure the image doesn't exceed the container's width */
-        height: auto; /* Maintain the aspect ratio */
-    }
+body {
+    font-family: Poppins;
+}
 
-    .submitButton {
-        width: 200px; /* Define a specific width for the button */
-        margin-left: 200px; /* Center the button horizontally */
-        border-radius: 10px;
-    }
 
-    #URLInputField{
-        border-radius: 10px;
-    }
+.container {
 
-    #nav-bar{
-        position: sticky;
-        top: 0;
-        z-index: 10;
-    }
+    width: 500px;
+    height: 500px;
 
-    .navbar{
-        background-image: linear-gradient(to right, #8EB6FF,#0059FA);
-        padding: 0 !important;
-    }
+}
 
-    /*------- Banner ------- */
-#banner{
-    background-image: linear-gradient(to right, #8EB6FF,#0059FA);
+.imgContainer {
+    width: 500px; /* Define a specific width for the container */
+    height: auto; /* Let the height adjust based on the image aspect ratio */
+    margin-left: -20px;
+    margin-top: 90px;
+}
+
+.imgContainer img {
+    max-width: 100%; /* Make sure the image doesn't exceed the container's width */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+.submitButton {
+    width: 200px; /* Define a specific width for the button */
+    margin-left: 200px; /* Center the button horizontally */
+    border-radius: 35px;
+}
+
+#URLInputField {
+    border-radius: 10px;
+}
+
+#nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar {
+    background-image: linear-gradient(to right, #0e6bff, #5500ff);
+    padding: 0 !important;
+}
+
+/*------- Banner ------- */
+#banner {
+    background-image: linear-gradient(to right, #0e6bff, #5500ff);
     color: #fff;
-        padding-top:5px;
+    padding-top: 5px;
 
 }
 
-.bottom-img{
-    width:100%;
+.bottom-img {
+    width: 100%;
 }
 
-.bannerPicture{
+.bannerPicture {
     position: absolute;
-    top:-220px;
-    left: 200px;
+    top: -50px;
+    left: 650px;
+    width: 600px;
+    height: auto;
+    z-index: 19;
 }
 
-.textOnBanner{
+.textOnBanner {
     position: absolute;
-    left:-400px;
+    top: 40px;
+    left: -200px;
+    font-weight: 500;
+    font-style: normal;
 
 }
 
 
-
-.navbarImage{
+.navbarImage {
     width: 7%;
     height: 7%;
 }
 
-  .nav-item {
+.nav-item {
     margin: 10px; /* Adjust margin for spacing */
-  }
 
-  .nav-link {
-    border-radius: 20px; /* Make the buttons round */
-    padding: 10px 20px; /* Add padding for spacing */
-    background-color: #ededed; /* Set background color */
-    color: #ffffff; /* Set text color */
-    transition: background-color 0.3s; /* Add smooth transition */
-  }
+}
 
-  .nav-link:hover {
-    background-color: #f6821f; /* Change background color on hover */
-    color: #ffffff; /* Change text color on hover */
-  }
+#nav-bar .nav-link {
+    color: white; /* Set font color to white */
+}
 
-.beginButton {
-    position: relative; /* Change to relative positioning */
-    margin-left: -405px; /* Adjust margin instead of absolute positioning */
-    top: 200px;
-    width: 150px; /* Adjust width */
-    height: 60px; /* Adjust height */
+#nav-bar .nav-link hoover {
+    color: grey;
 }
 
 
+.nav-link {
+    padding: 10px 20px; /* Add padding for spacing */
+
+}
+
+.nav-link:hover {
+    color: grey;
+    background-color: grey;;
+}
+
+.beginButton {
+    position: relative; /* Change to relative positioning */
+    margin-left: -220px; /* Adjust margin instead of absolute positioning */
+    top: 200px;
+    width: 150px; /* Adjust width */
+    height: 60px; /* Adjust height */
+    color: #ffffff;
+}
+
+.learnMoreButton {
+    position: relative;
+    left: -50px;
+    top: -54px
+}
+
+.learnMoreButton button {
+    color: #ffffff; /* Sets text color to white */
+    font-size: 18px; /* Maintain consistent font size */
+    border-radius: 10px; /* Maintain consistent border radius */
+    margin-top: 200px;
+    background-color: transparent; /* Make background transparent */
+    border: none; /* Remove border */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.learnMoreButton button:hover {
+    color: #ffffff; /* Sets text color to white on hover */
+    text-decoration: underline; /* Underline text on hover */
+    background-color: transparent; /* Make background transparent on hover */
+}
+
+
+.my-stacked-icon {
+    font-size: 76px;
+}
 
 .beginButton button {
     font-size: 18px; /* Maintain consistent font size */
     border-radius: 10px; /* Maintain consistent border radius */
-    background-color: #007bff; /* Set background color */
-    color: #ffffff; /* Set text color */
+    background-color: #00ba94; /* Set background color */
+    /* Set text color */
 }
 
-.beginButton button:hover{
-    background-color: #f6821f; /* Change background color on hover */
-    color: #ffffff; /* Change text color on hover */
+.beginButton button:hover {
+    background-color: #009576;
+}
+
+
+.secondaryText {
+    color: grey;
+}
+
+.circle {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: #007bff;
+
+
+    margin: 0 40px;
+}
+
+.circle img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.circle-text {
+    text-align: center;
+    margin-top: 10px; /* Adjust as needed */
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+.box-100 {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0px 0px 2px 6px rgba(0, 0, 0, 0.03);
+    width: 100px;
+    height: 100px;
+    color: #fff;
+background-image: linear-gradient(to right, #0e6bff, #5500ff);
+    border-radius: 100px;
+}
+
+.box-100 i {
+    font-size: 60px;
+}
+
+.box-100:hover {
+    box-shadow: 0px 0px 5px 8px rgba(0, 0, 0, 0.08);
+}
+
+.box-100:hover i {
+    opacity: 0.5;
+}
+
+.cc {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.cc:hover {
+    box-shadow: 0px 0px 32px 2px rgba(0, 0, 0, 0.06);
+}
+
+.btn {
+    padding: 14px 26px;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+.footerContainer{
+    background-image: linear-gradient(to right, #0e6bff,#5500ff);
+
 }

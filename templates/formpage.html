@@ -26,21 +26,24 @@
 
 <div class="container">
     <!--<h1>Images without Alt Text</h1>-->
-    <table class="table table-striped">
-        <thead>
+    <table class="table table-hover table-striped rounded">
+        <thead class="table-dark text-center">
         <tr>
             <th scope="col">#</th>
             <th scope="col">URL</th>
-            <th scope="col">alt text:</th>
-            <th scope="col">SOURCE PICTURE</th>
+            <th scope="col">alt text on picture:</th>
+            <th scope="col">Image:</th>
+            <th scope="col">Recommended Alt text</th>
         </tr>
         </thead>
         {% for image in images %}
-        <tbody>
+        <tbody class="text-center">
         <td scope="col">{{ loop.index }}</td>
         <td scope="col">{{ image.src }}</td>
         <td scope="col">{{ image.alt }}</td>
+        <td scope="col">{{ image.ai }}</td>
         <td><img src="{{ image.src }}"> </td>
+
         </tbody>
         {% endfor %}
     </table>

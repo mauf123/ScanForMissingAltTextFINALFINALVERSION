@@ -1,9 +1,18 @@
+@font-face{
+    font-family: "Poppins";
+    src: url("../static/Poppins-Light.ttf");
+}
+
+body{
+    font-family: Poppins;
+}
+
 .container{
     margin-top: 30px;
 }
 
 #bannerTop{
-    background-image: linear-gradient(to right, #8EB6FF,#0059FA);
+    background-image: linear-gradient(to right, #0e6bff,#5500ff);
     color: #fff;
         padding-top:5px;
 
@@ -26,7 +35,7 @@
 }
 
 #bannerBottom{
-    background-image: linear-gradient(to right, #8EB6FF,#0059FA);
+    background-image: linear-gradient(to right, #0e6bff,#5500ff);
     color: #fff;
     left: 0;
     bottom: 0;
@@ -38,5 +47,6 @@
 
 }
 
-
-
+.rounded{
+    border-radius: 20px;
+}

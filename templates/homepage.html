@@ -4,63 +4,73 @@
     <meta charset="UTF-8">
     <title>Bootstrap Form Example</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../static/styleForHomePage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
+
 </head>
 <body>
 
 <!--- NAVBAR ---->
 <section id="nav-bar">
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <img src="../static/images/alts_canner-removebg-preview.png" class="navbarImage">
-  </button>
+    <!-- <h1>AIscanner</h1> -->
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="homepage.html">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">about the program</a>
-      </li>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-    </ul>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="homepage.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">about the program</a>
+                </li>
 
-  </div>
-</nav>
+            </ul>
+
+        </div>
+    </nav>
 </section>
 
 <!---- Banner Section -->
 <section id="banner">
-<div class="container">
-    <div class="col-md-6">
-        <div class="textOnBanner">
-            <h1>Scanning your pictures for missing alt text</h1>
-            <p> This is a software project created based on our final project for our computer science education. The project is solely made for helping companies look through their website and finding pictures without alt text, so they can comply with the European accessibility act
-            </p>
-        </div>
+    <div class="container">
+        <div class="col-md-6">
+            <div class="textOnBanner">
+                <h1 class="mainText">Scan images on your website for missing alt text</h1>
+                <p class="secondaryText"> Optimize your websites performance with alt text descriptions for your images
+                </p>
+            </div>
 
-        <div class="beginButton">
-            <button class="btn btn-primary" onclick="scrollToURLInputField()">Begin</button>
-        </div>
+            <div class="beginButton">
+                <button class="btn btn-primary  " onclick="scrollToURLInputField()">Get started</button>
+            </div>
+
+            <div class="learnMoreButton">
+                <button class="btn btn-teal" href="https://www.w3.org/WAI/alt/"> Learn more</button>
+            </div>
 
 
+            <img class="bannerPicture" src="../static/images/network.png">
 
-        <div class="bannerPicture">
-            <img src="../static/images/home2.png">
         </div>
     </div>
-</div>
-<img src="../static/images/wave1.png" class="bottom-img" id="wavePicture">
+    <img src="../static/images/wave1.png" class="bottom-img" id="wavePicture">
 </section>
-
 <div class="container">
-    <div class="imgContainer">
-        <img src="../static/images/alts_canner-removebg-preview.png">
-    </div>
+
     <form action="/formpage" method="POST">
         <div class="form-group">
             <label for="URLInputField"></label>
@@ -72,93 +82,66 @@
     </form>
 </div>
 
-<link rel="import" href="templates/footer template.html"> <!-- Link to your template file -->
-<footer class="bg-primary text-center text-white">
-    <!-- Grid container -->
-    <div class="container p-4">
-
-        <!-- Section: Text -->
-        <section class="mb-4">
-            <p>
-This software project, created by Kasper and Marcus from KEA, focuses solely on scanning websites for missing alt text on images. Alt text is crucial for accessibility, providing descriptions for images that assist users who may have visual impairments. Our software aims to streamline this process by identifying any instances where alt text is absent, ensuring websites are more inclusive and accessible for all users            </p>
-        </section>
-        <!-- Section: Text -->
-
-        <!-- Section: Links -->
-        <section class="">
-            <!--Grid row-->
-            <div class="row">
-                <!--Grid column-->
-
-                <!--Grid column-->
-
-                <!--Grid column-->
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+<div class="container py-5">
+    <div class="row py-5">
+        <div class="col-12 text-center">
+            <h2 class="mb-2 h1 font-weight-bold">Super clean user interface for easier use.</h2>
+            <p class="mb-5 text-black-50">Lost the plot cracking goal give us a bell is bog horse play
+                knackered lemon squeezy.</p>
+            <div class="row pt-3">
+                <div class="col-lg-4 col-md-6 vv">
+                    <div class="p-4 border-light border rounded cc">
+                        <div class="d-flex justify-content-center align-items-center border rounded-circle box-100 mx-auto">
+                            <i class="lni lni-slideshare"></i></div>
+                        <h5 class="mb-3 mt-5">Enhanced Accessibility</h5>
+                        <p class="mb-4 text-muted">Automatically adds alt text to images, ensuring accessibility for
+                            users with visual impairments.</p>
+                    </div>
                 </div>
-                <!--Grid column-->
-
-                <!--Grid column-->
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase">Links</h5>
-                    <ul class="list-unstyled mb-0">
-                        <li>
-                            <a href="#!" class="text-white">Link 1</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white">Link 2</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white">Link 3</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white">Link 4</a>
-                        </li>
-                    </ul>
+                <div class="col-lg-4 col-md-6 vv">
+                    <div class="p-4 border-light border rounded cc">
+                        <div class="d-flex justify-content-center align-items-center border rounded-circle box-100 mx-auto">
+                            <i class="lni lni-timer"></i>
+                        </div>
+                        <h5 class="mb-3 mt-5">Time-Saving Automation</h5>
+                        <p class="mb-4 text-muted">Saves time and effort by automating the process of adding alt text to
+                            images</p>
+                    </div>
                 </div>
-                <!--Grid column-->
-
-                <!--Grid column-->
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase">Links</h5>
-                    <ul class="list-unstyled mb-0">
-                        <li>
-                            <a href="#!" class="text-white">Link 1</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white">Link 2</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white">Link 3</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white">Link 4</a>
-                        </li>
-                    </ul>
+                <div class="col-lg-4 col-md-6 vv">
+                    <div class="p-4 border-light border rounded cc">
+                        <div class="d-flex justify-content-center align-items-center border rounded-circle box-100 mx-auto">
+                            <i class="lni lni-bug"></i>
+                        </div>
+                        <h5 class="mb-3 mt-5">Error-Free Consistency</h5>
+                        <p class="mb-4 text-muted">Reduces errors and ensures consistent image descriptions across the
+                            website.</p>
+                    </div>
                 </div>
-                <!--Grid column-->
+
             </div>
-            <!--Grid row-->
-        </section>
-        <!-- Section: Links -->
 
+        </div>
     </div>
-    <!-- Grid container -->
+</div>
 
 
 
-</footer>
+
 <!-- Bootstrap JS (optional, for certain components) -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous"></script>
 
 <script>
-function scrollToURLInputField() {
-    var wavePicture = document.getElementById('wavePicture');
-    if (wavePicture) {
-        var offsetFromInputfield = 5000;
-       var scrollSection = wavePicture.offsetTop - offsetFromInputfield;
-        wavePicture.scrollIntoView({top: scrollSection, behavior: 'smooth' });
+    function scrollToURLInputField() {
+        var wavePicture = document.getElementById('wavePicture');
+        if (wavePicture) {
+            var offsetFromInputfield = 5000;
+            var scrollSection = wavePicture.offsetTop - offsetFromInputfield;
+            wavePicture.scrollIntoView({top: scrollSection, behavior: 'smooth'});
+        }
     }
-}
 </script>
 </body>
 </html>
