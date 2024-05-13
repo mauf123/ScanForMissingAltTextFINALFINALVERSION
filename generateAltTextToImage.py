@@ -1,5 +1,3 @@
-import os
-from flask import Flask, render_template, request
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse
@@ -8,7 +6,6 @@ import torch
 from PIL import Image
 from io import BytesIO
 
-app = Flask(__name__, static_url_path="/static")
 
 
 #Boiler plate code from NLPConnect
@@ -93,16 +90,3 @@ def find_images_without_alt(url):
 
     print("Images without alt text:", image_list)
     return image_list
-
-@app.route('/')
-def index():
-    return render_template("homepage.html")
-
-@app.route('/formpage', methods=["POST"])
-def result():
-    url = request.form["url"]
-    images_without_alt = find_images_without_alt(url)
-    return render_template('formpage.html', images=images_without_alt)
-
-if __name__ == "__main__":
-    app.run(debug=True)
