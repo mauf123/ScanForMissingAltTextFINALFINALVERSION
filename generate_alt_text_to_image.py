@@ -4,12 +4,10 @@ from urllib.parse import urlparse
 from transformers import VisionEncoderDecoderModel, ViTImageProcessor, AutoTokenizer
 import torch
 from PIL import Image
-from io import BytesIO
 
 
 
-#Boiler plate code from NLPConnect
-# Initialize the VisionEncoderDecoder model
+#Boilerplate code from NLPConnect
 model = VisionEncoderDecoderModel.from_pretrained("nlpconnect/vit-gpt2-image-captioning")
 feature_extractor = ViTImageProcessor.from_pretrained("nlpconnect/vit-gpt2-image-captioning")
 tokenizer = AutoTokenizer.from_pretrained("nlpconnect/vit-gpt2-image-captioning")
@@ -17,12 +15,11 @@ tokenizer = AutoTokenizer.from_pretrained("nlpconnect/vit-gpt2-image-captioning"
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model.to(device)
 
-# Maximum length and number of beams for generation
 max_length = 16
 num_beams = 4
 gen_kwargs = {"max_length": max_length, "num_beams": num_beams}
 
-def predict_step(image_paths):
+def generate_alt_text(image_paths):
     images = []
     for image_path in image_paths:
         i_image = Image.open(image_path)
@@ -40,7 +37,7 @@ def predict_step(image_paths):
     preds = [pred.strip() for pred in preds]
     return preds
 
-def generate_alt_text(image_url):
+def download_image(image_url):
     # Download image from URL
     response = requests.get(image_url)
     image_name = image_url.split('/')[-1]
@@ -49,37 +46,32 @@ def generate_alt_text(image_url):
         f.write(response.content)
 
     # Generate alt text for the downloaded image
-    alt_text = predict_step([image_path])[0]
+    alt_text = generate_alt_text([image_path])[0]
     return alt_text
 
-def find_images_without_alt(url):
+def find_images_without_alt_text(url):
     image_list = []
     try:
-        # Extract the domain name from the provided URL
         parsed_url = urlparse(url)
         domain = parsed_url.netloc
 
-        # Fetch the HTML content of the webpage
         response = requests.get(url)
         html_content = response.text
 
-        # Parse the HTML content
         soup = BeautifulSoup(html_content, 'html.parser')
 
-        # Find all image elements
         img_tags = soup.find_all('img')
 
-        # Check each image for alt text
         for img in img_tags:
             if not img.has_attr('alt') or img['alt'] == '':
                 src = img.get('src')
-                # Check if the src ends with a valid image extension
+
                 valid_extensions = ['.png', '.jpg', '.jpeg', '.gif', '.webp']
                 if any(src.endswith(ext) for ext in valid_extensions):
-                    # If src is a relative path, convert it to absolute URL
+
                     if not src.startswith('http'):
                         src = urlparse(url).scheme + '://' + urlparse(url).netloc + src
-                    alt_text = generate_alt_text(src)
+                    alt_text = download_image(src)
                     image_list.append({
                         'src': src,
                         'alt': "no alt text provided",
