@@ -16,29 +16,56 @@
 </head>
 <body>
 
+<!--- NAVBAR ---->
+<section id="nav-bar">
+    <!-- <h1>AIscanner</h1> -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="logo">
+            <img src="../static/images/icons/Logo ALTSCANNER FINAL.png">
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="homepage.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">about the program</a>
+                </li>
+
+            </ul>
+
+        </div>
+    </nav>
+</section>
+
+<!--
 <section id="bannerTop">
     <div class="container">
         <div class="col-md-6">
         </div>
     </div>
+
     <img src="../static/images/wave1.png" class="bottom-img" id="wavePicture">
 </section>
-
+-->
+<!--
 <div class="headerOfTablePage">
 </div>
-
+-->
 <div class="container">
+<div class="tableh1">
     <h1>AI description of pictures</h1>
-
+</div>
     <!--<h1>Images without Alt Text</h1>-->
-    <table class="table table-hover table-striped rounded">
+    <table class="table table-striped rounded">
         <thead class="table-dark text-center">
         <tr>
             <th scope="col">#</th>
             <th scope="col">URL</th>
             <th scope="col">alt text on picture:</th>
+            <th scope="col">Recommended alt text:</th>
             <th scope="col">Image:</th>
-            <th scope="col">Recommended Alt text</th>
         </tr>
         </thead>
         {% for image in images %}
@@ -52,19 +79,86 @@
         </tbody>
         {% endfor %}
     </table>
+<!--
+<div class="goBackButton">
+
 <a href="homepage.html">
-  <button class="btn btn-primary  " >Go back</button>
+  <button class="btn btn-primary" >Go back</button>
 </a>
+    </div>
+-->
 </div>
 
 
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-body-tertiary text-muted" id="footer">
+    <!-- Section: Social media -->
 
-<section id="bannerBottom">
-    <div class="reverse-image">
-        <img src="../static/images/wave1.png" class="bottom-img" id="wavePicture">
-    </div>
-</section>
+    <!-- Section: Social media -->
 
+    <!-- Section: Links  -->
+    <section class="">
+        <div class="container text-center text-md-start mt-5">
+            <!-- Grid row -->
+            <div class="row mt-3">
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <!-- Content -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        <i class="fas fa-gem me-3"></i>Alt scanner
+                    </h6>
+                    <p>
+                        This is a product made for companies so they can automate their process of creating a alt text
+                        to pictures
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        Useful links
+                    </h6>
+                    <p>
+                        <a href="#https://www.w3.org/WAI/standards-guidelines/wcag/" class="text-reset">WCAG</a>
+                    </p>
+                    <p>
+                        <a href="#https://ec.europa.eu/social/main.jsp?catId=1202" class="text-reset">European
+                            accesiblity act</a>
+                    </p>
+                    <p>
+                        <a href="#https://en.digst.dk/digital-services/web-accessibility-in-denmark/"
+                           class="text-reset">Web Accessibility in Denmark</a>
+                    </p>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                    <p><i class="fas fa-home me-3"></i> Guldbersgade 2, 2200, Nørrebro</p>
+                    <p>
+                        <i class="fas fa-envelope me-3"></i>
+                        support@AI.com
+                    </p>
+                    <p><i class="fas fa-phone me-3"></i> +45 12 23 34 45</p>
+                    <p><i class="fas fa-print me-3"></i> +45 56 67 78 89</p>
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+        </div>
+    </section>
+    <!-- Section: Links  -->
+</footer>
+
+<!-- Footer -->
 <!-- Bootstrap JS (optional, for certain components) -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"></script>
 </body>

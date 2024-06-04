@@ -28,7 +28,9 @@
     <!-- <h1>AIscanner</h1> -->
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
+        <div class="logo">
+            <img src="../static/images/icons/Logo ALTSCANNER FINAL.png">
+        </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
@@ -49,19 +51,18 @@
     <div class="container">
         <div class="col-md-6">
             <div class="textOnBanner">
-                <h1 class="mainText">Scan images on your website for missing alt text</h1>
-                <p class="secondaryText"> Optimize your websites performance with alt text descriptions for your images
+                <h1 class="mainText">Scan your images for missing alt text</h1>
+                <p class="secondaryText"> Generate an AI alt text to your pictures by inserting an url
                 </p>
-            </div>
 
-            <div class="beginButton">
-                <button class="btn btn-primary  " onclick="scrollToURLInputField()">Get started</button>
-            </div>
-
-            <div class="learnMoreButton">
-                <a href="https://www.w3.org/WAI/alt/">
-                <button class="btn btn-teal" > Learn more</button>
-                    </a>
+                <form action="/formpage" method="POST">
+                    <div class="divInputField">
+                        <input type="text" class="form-control" id="URLInputField" name="url" placeholder="Enter URL">
+                        <div class="submitButton">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </form>
             </div>
 
 
@@ -73,154 +74,122 @@
 </section>
 
 
-<div class="container py-5">
-    <div class="row py-5">
-        <div class="col-12 text-center">
-            <h2 class="mb-2 h1 font-weight-bold">Super clean user interface for easier use.</h2>
-            <p class="mb-5 text-black-50">Lost the plot cracking goal give us a bell is bog horse play
-                knackered lemon squeezy.</p>
-            <div class="row pt-3">
-                <div class="col-lg-4 col-md-6 vv">
-                    <div class="p-4 border-light border rounded cc">
-                        <div class="d-flex justify-content-center align-items-center border rounded-circle box-100 mx-auto">
-                            <i class="lni lni-slideshare"></i></div>
-                        <h5 class="mb-3 mt-5">Enhanced Accessibility</h5>
-                        <p class="mb-4 text-muted">Automatically adds alt text to images, ensuring accessibility for
-                            users with visual impairments.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 vv">
-                    <div class="p-4 border-light border rounded cc">
-                        <div class="d-flex justify-content-center align-items-center border rounded-circle box-100 mx-auto">
-                            <i class="lni lni-timer"></i>
+<div class="InfoContainer">
+    <div class="container py-5">
+        <div class="row py-5">
+            <div class="col-12 text-center">
+                <h2 class="mb-2 h1 font-weight-bold">Super clean user interface for easier use.</h2>
+                <p class="mb-5 text-black-50">Lost the plot cracking goal give us a bell is bog horse play
+                    knackered lemon squeezy.</p>
+                <div class="row pt-3">
+                    <div class="col-lg-4 col-md-6 vv">
+                        <div class="p-4 border-light border rounded cc">
+                            <div class="d-flex justify-content-center align-items-center border rounded-circle box-100 mx-auto">
+                                <i class="lni lni-slideshare"></i></div>
+                            <h5 class="mb-3 mt-5">Enhanced Accessibility</h5>
+                            <p class="mb-4 text-muted">Automatically adds alt text to images, ensuring accessibility for
+                                users with visual impairments.</p>
                         </div>
-                        <h5 class="mb-3 mt-5">Time-Saving Automation</h5>
-                        <p class="mb-4 text-muted">Saves time and effort by automating the process of adding alt text to
-                            images</p>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 vv">
-                    <div class="p-4 border-light border rounded cc">
-                        <div class="d-flex justify-content-center align-items-center border rounded-circle box-100 mx-auto">
-                            <i class="lni lni-bug"></i>
+                    <div class="col-lg-4 col-md-6 vv">
+                        <div class="p-4 border-light border rounded cc">
+                            <div class="d-flex justify-content-center align-items-center border rounded-circle box-100 mx-auto">
+                                <i class="lni lni-timer"></i>
+                            </div>
+                            <h5 class="mb-3 mt-5">Time-Saving Automation</h5>
+                            <p class="mb-4 text-muted">Saves time and effort by automating the process of adding alt
+                                text to
+                                images</p>
                         </div>
-                        <h5 class="mb-3 mt-5">Error-Free Consistency</h5>
-                        <p class="mb-4 text-muted">Reduces errors and ensures consistent image descriptions across the
-                            website.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 vv">
+                        <div class="p-4 border-light border rounded cc">
+                            <div class="d-flex justify-content-center align-items-center border rounded-circle box-100 mx-auto">
+                                <i class="lni lni-bug"></i>
+                            </div>
+                            <h5 class="mb-3 mt-5">Error-Free Consistency</h5>
+                            <p class="mb-4 text-muted">Reduces errors and ensures consistent image descriptions across
+                                the
+                                website.</p>
+                        </div>
+
                     </div>
                 </div>
 
             </div>
 
         </div>
+
     </div>
 </div>
 
-<div class="container">
-
-    <form action="/formpage" method="POST">
-        <div class="form-group">
-            <label for="URLInputField"></label>
-            <input type="text" class="form-control" id="URLInputField" name="url" placeholder="Enter URL">
-        </div>
-        <div class="submitButton">
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </div>
-    </form>
-</div>
 
 <!-- Footer -->
 <footer class="text-center text-lg-start bg-body-tertiary text-muted" id="footer">
-  <!-- Section: Social media -->
-  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-    <!-- Left -->
-    <div class="me-5 d-none d-lg-block">
-      <span>Get connected with us on social networks:</span>
-    </div>
-    <!-- Left -->
+    <!-- Section: Social media -->
 
-    <!-- Right -->
-    <div>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-google"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-    <!-- Right -->
-  </section>
-  <!-- Section: Social media -->
+    <!-- Section: Social media -->
 
-  <!-- Section: Links  -->
-  <section class="">
-    <div class="container text-center text-md-start mt-5">
-      <!-- Grid row -->
-      <div class="row mt-3">
-        <!-- Grid column -->
-        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-          <!-- Content -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            <i class="fas fa-gem me-3"></i>Alt scanner
-          </h6>
-          <p>
-            This is a product made for companies so they can automate their process of creating a alt text to pictures
-          </p>
+    <!-- Section: Links  -->
+    <section class="">
+        <div class="container text-center text-md-start mt-5">
+            <!-- Grid row -->
+            <div class="row mt-3">
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <!-- Content -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        <i class="fas fa-gem me-3"></i>Alt scanner
+                    </h6>
+                    <p>
+                        This is a product made for companies so they can automate their process of creating a alt text
+                        to pictures
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        Useful links
+                    </h6>
+                    <p>
+                        <a href="#https://www.w3.org/WAI/standards-guidelines/wcag/" class="text-reset">WCAG</a>
+                    </p>
+                    <p>
+                        <a href="#https://ec.europa.eu/social/main.jsp?catId=1202" class="text-reset">European
+                            accesiblity act</a>
+                    </p>
+                    <p>
+                        <a href="#https://en.digst.dk/digital-services/web-accessibility-in-denmark/"
+                           class="text-reset">Web Accessibility in Denmark</a>
+                    </p>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                    <p><i class="fas fa-home me-3"></i> Guldbersgade 2, 2200, Nørrebro</p>
+                    <p>
+                        <i class="fas fa-envelope me-3"></i>
+                        support@AI.com
+                    </p>
+                    <p><i class="fas fa-phone me-3"></i> +45 12 23 34 45</p>
+                    <p><i class="fas fa-print me-3"></i> +45 56 67 78 89</p>
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
         </div>
-        <!-- Grid column -->
-
-
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-          <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            Useful links
-          </h6>
-          <p>
-            <a href="#https://www.w3.org/WAI/standards-guidelines/wcag/" class="text-reset">WCAG</a>
-          </p>
-          <p>
-            <a href="#https://ec.europa.eu/social/main.jsp?catId=1202" class="text-reset">European accesiblity act</a>
-          </p>
-          <p>
-            <a href="#https://en.digst.dk/digital-services/web-accessibility-in-denmark/" class="text-reset">Web Accessibility in Denmark</a>
-          </p>
-
-        </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-          <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-          <p><i class="fas fa-home me-3"></i> Guldbersgade 2, 2200, Nørrebro</p>
-          <p>
-            <i class="fas fa-envelope me-3"></i>
-            support@AI.com
-          </p>
-          <p><i class="fas fa-phone me-3"></i> +45 12 23 34 45</p>
-          <p><i class="fas fa-print me-3"></i> +45 56 67 78 89</p>
-        </div>
-        <!-- Grid column -->
-      </div>
-      <!-- Grid row -->
-    </div>
-  </section>
-  <!-- Section: Links  -->
+    </section>
+    <!-- Section: Links  -->
 
 
 </footer>

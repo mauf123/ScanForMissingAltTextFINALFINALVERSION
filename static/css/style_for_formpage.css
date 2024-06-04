@@ -4,7 +4,16 @@
 }
 
 body{
-    font-family: Poppins;
+
+      background-image: url("../images/icons/pexels-tima-miroshnichenko-5686112.jpg");
+  background-size: cover; /* This will make the background image cover the entire background */
+  background-repeat: no-repeat;
+}
+.tableh1{
+    color: white;
+}
+.table td {
+    background-color: white !important;
 }
 
 .container{
@@ -51,3 +60,69 @@ body{
     border-radius: 20px;
 }
 
+#footer a,p,h6{
+    color:white;
+}
+
+.footerContainer{
+    background-image: linear-gradient(to right, #0e6bff,#5500ff);
+
+}
+
+#footer {
+    background-image: linear-gradient(to right, #0e6bff, #5500ff);
+}
+
+.goBackButton{
+    margin-bottom: 30px;
+}
+
+#nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar {
+    background-image: linear-gradient(to right, #0e6bff, #5500ff);
+    padding: 0 !important;
+}
+
+.logo img{
+    width: 25%;
+    height: 25%;
+}
+
+.navbarImage {
+    width: 7%;
+    height: 7%;
+}
+
+.nav-item {
+    margin: 10px; /* Adjust margin for spacing */
+
+}
+
+#nav-bar .nav-link {
+    color: white; /* Set font color to white */
+}
+
+#nav-bar .nav-link hoover {
+    color: grey;
+}
+
+
+.nav-link {
+    padding: 10px 20px; /* Add padding for spacing */
+
+}
+
+.nav-link:hover {
+    color: grey;
+    background-color: grey;;
+}
+
+.goBackButton button {
+                background-color: green;
+
+}
