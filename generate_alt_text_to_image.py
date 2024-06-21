@@ -76,7 +76,7 @@ def find_images_without_alt_text(url):
         #looper igennem html og finder alle img tag på siden og putter det i et resultset - kan sammenlignes med et array.
         img_tags = soup.find_all('img')
 
-        #Looper vi igennem img_tags og tjekker hvis img har variablen alt eller alt er tomt
+        #Looper vi igennem img_tags og tjekker hvis img har variablen alt eller alt er tomt #
         for img in img_tags:
             if not img.has_attr('alt') or img['alt'] == '':
                 src = img.get('src')
