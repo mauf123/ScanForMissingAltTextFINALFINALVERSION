@@ -35,7 +35,6 @@ def generate_alt_text(image_paths):
     # Boilerplate kode, men basically generere den en alt ai text til billedet.
     output_ids = model.generate(pixel_values, **gen_kwargs)
     AIText = tokenizer.batch_decode(output_ids, skip_special_tokens=True)
-    AIText = [pred.strip() for pred in AIText]
     return AIText
 
 def download_image(image_url):
@@ -44,7 +43,8 @@ def download_image(image_url):
     # Downloader billedet gennem GET funktionen
     response = requests.get(image_url)
 
-    #splitter billedet navnet(image.jpg) fra urlen (C://..../static/image.jpg)
+    #https://example.com/image.jpg
+    #['http:', '', 'example.com', 'image.jpg'] -1 tager sidste element
     image_name = image_url.split('/')[-1]
 
     #tager fat i static mappen og skriver i binary(WB= Write binary) så billedet bliver puttet ind i static mappen
@@ -68,6 +68,8 @@ def find_images_without_alt_text(url):
 
         #Henter html siden og gemmer den i en variabel der hedder html_content
         response = requests.get(url)
+
+        #putter alt indhold ned i en string
         html_content = response.text
 
         #Bruger soup bibloteket til at arbejde med html koden og specifikt img tags.
@@ -84,6 +86,7 @@ def find_images_without_alt_text(url):
 
                 #Her tjekker vi om billedet slutter på de mest populære billede-extensions
                 valid_extensions = ['.png', '.jpg', '.jpeg', '.gif', '.webp']
+
                 if any(src.endswith(ext) for ext in valid_extensions):
 
                     #Hvis ikke billedets url indeholder http, så putter vi http i starten af billedet, så man kan se den fulde URL til billedet.
